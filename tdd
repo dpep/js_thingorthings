@@ -1,0 +1,4 @@
+#!/bin/sh
+
+clear
+./node_modules/mocha/bin/mocha --watch
