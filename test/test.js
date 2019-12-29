@@ -28,6 +28,12 @@ describe('ThingOrThings', function() {
     })
   })
 
+  it('should handle one packaged thing', function() {
+    findLengths([ 'a' ]).should.eql(res, {
+      a: 1,
+    })
+  })
+
 
   it('should handle no things', function() {
     findLengths([]).should.eql({});
@@ -49,7 +55,7 @@ describe('ThingOrThings', function() {
   })
 
 
-  it('should expect every thing or no thing back', function() {
+  it('should expect every thing or no thing to be returned', function() {
     const returnA = things(() => { return { a: 1 } })
     const returnEmpty = things(() => {})
 
